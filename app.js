@@ -6,7 +6,7 @@ let time_start = moment().subtract(1, 'years').format();
 const queryURL = `https://rest.coinapi.io/v1/ohlcv/${coin_name}_SPOT_BTC_USD/history?period_id=${period_id}&time_start=${time_start}&time_end=${time_end}&apikey=${apiKey}`;
 const queryURL1 = `https://rest.coinapi.io/v1/symbols?filter_symbol_id=BTC&apikey=${apiKey}`
 
-$(document).ready( getGraph(queryURL));
+$(document).ready(getGraph(queryURL));
 
 $('#submit').on('click', function () {
     console.log($(this).siblings('input').val());
@@ -56,39 +56,39 @@ $('#submit').on('click', function () {
 
 
 });
-$('#coin-name').on('keydown', function (e) { 
+$('#coin-name').on('keydown', function (e) {
     if (e.key === "Enter") {
         if ($(this).siblings('select').val() === 'year') {
             period_id = "7DAY";
             time_start = moment().subtract(1, 'years').format();
             coin_name = $(this).siblings('input').val();
-    
+
             const querySel = `https://rest.coinapi.io/v1/ohlcv/${coin_name}_SPOT_BTC_USD/history?period_id=${period_id}&time_start=${time_start}&time_end=${time_end}&apikey=${apiKey}`;
-    
-    
+
+
         } else if ($(this).siblings('select').val() === 'quarter') {
             period_id = "1DAY";
             time_start = moment().subtract(3, 'months').format();
             coin_name = $(this).siblings('input').val();
-    
+
             const querySel = `https://rest.coinapi.io/v1/ohlcv/${coin_name}_SPOT_BTC_USD/history?period_id=${period_id}&time_start=${time_start}&time_end=${time_end}&apikey=${apiKey}`;
         } else if ($(this).siblings('select').val() === 'month') {
             period_id = "12HRS";
             time_start = moment().subtract(1, 'months').format();
             coin_name = $(this).siblings('input').val();
-    
+
             const querySel = `https://rest.coinapi.io/v1/ohlcv/${coin_name}_SPOT_BTC_USD/history?period_id=${period_id}&time_start=${time_start}&time_end=${time_end}&apikey=${apiKey}`;
         } else if ($(this).siblings('select').val() === 'week') {
             period_id = "3HRS";
             time_start = moment().subtract(1, 'weeks').format();
             coin_name = $(this).siblings('input').val();
-    
+
             const querySel = `https://rest.coinapi.io/v1/ohlcv/${coin_name}_SPOT_BTC_USD/history?period_id=${period_id}&time_start=${time_start}&time_end=${time_end}&apikey=${apiKey}`;
         } else if ($(this).siblings('select').val() === 'today') {
             period_id = "15MIN";
             time_start = moment().subtract(1, 'days').format();
             coin_name = $(this).siblings('input').val();
-    
+
             const querySel = `https://rest.coinapi.io/v1/ohlcv/${coin_name}_SPOT_BTC_USD/history?period_id=${period_id}&time_start=${time_start}&time_end=${time_end}&apikey=${apiKey}`;
         }
 
@@ -194,6 +194,40 @@ function getGraph(queryURL) {
             .attr('stroke', 'steelblue')
             .attr('stroke-width', '1.5')
             .attr('d', line);
+        const volData = response.filter(d => d['volume_traded'] !== null && d['volume_traded'] !== 0);
+        const yMinVolume = d3.min(volData, d => {
+            return Math.min(d['volume_traded']);
+        });
+        const yMaxVolume = d3.max(volData, d => {
+            return Math.max(d['volume_traded']);
+        });
+        const yVolumeScale = d3
+            .scaleLinear()
+            .domain([yMinVolume, yMaxVolume])
+            .range([height, 0]);
+        svg
+            .selectAll()
+            .data(volData)
+            .enter()
+            .append('rect')
+            .attr('x', d => {
+                return xScale(parseInt(moment(d['time_period_end']).local().format('x')));
+            })
+            .attr('y', d => {
+                return yVolumeScale(d['volume_traded']);
+            })
+            .attr('fill', (d, i) => {
+                if (i === 0) {
+                    return '#03a678';
+                } else {
+                    return volData[i - 1].close > d.close ? '#c0392b' : '#03a678';
+                }
+            })
+            .attr('width', 1)
+            .attr('height', d => {
+                return height - yVolumeScale(d['volume_traded']);
+            });
+
     }
     );
 }
