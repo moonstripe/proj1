@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>BCS Crypto Dash Temp</title>
+    <title>Material Design HTML Template</title>
     <!--<base href="/cryptum/demo/">-->
     <!-- load Google fonts -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons%7CPlayfair+Display:400,400i,700%7CRoboto+Condensed:400,700" rel="stylesheet">
@@ -25,7 +25,7 @@
         <nav class="crypto-navigation">
   <a href="index.html" class="crypto-navigation__logo">
     <!-- Image element or even SVG can be used here -->
-    <!-- <img src="assets/images/crypto-logo.svg" alt="Crypto" class="crypto-navigation__logo-image">
+    <!-- <img src="/cryptum/demo/assets/images/crypto-logo.svg" alt="Crypto" class="crypto-navigation__logo-image">
      -->
      <svg height="40" viewBox="0 0 40 40" width="40" xmlns="http://www.w3.org/2000/svg">
       <g fill-rule="nonzero" transform="translate(22 22)">
@@ -38,8 +38,8 @@
   </a>
   <ul class="crypto-navigation__list">
     
-      <li class="crypto-navigation__list-item mdc-ripple-surface crypto-navigation__list-item--active">
-        <a href="#">
+      <li class="crypto-navigation__list-item mdc-ripple-surface ">
+        <a href="index.html#">
           <i class="material-icons crypto-navigation__list-item__icon" aria-hidden="true">timeline</i>
           
           <span class="crypto-navigation__list-item__label mdc-theme--on-surface mdc-typography--overline">
@@ -48,7 +48,7 @@
         </a>
       </li>
     
-      <li class="crypto-navigation__list-item mdc-ripple-surface ">
+      <li class="crypto-navigation__list-item mdc-ripple-surface crypto-navigation__list-item--active">
         <a href="wallet.html">
           <i class="material-icons crypto-navigation__list-item__icon" aria-hidden="true">account_balance_wallet</i>
           
@@ -90,6 +90,15 @@
         </a>
       </li>
     
+      <li class="crypto-navigation__list-item mdc-ripple-surface ">
+        <a href="login.html">
+          <i class="material-icons crypto-navigation__list-item__icon" aria-hidden="true">power_settings_new</i>
+          
+          <span class="crypto-navigation__list-item__label mdc-theme--on-surface mdc-typography--overline">
+            Logout
+          </span>
+        </a>
+      </li>
     
   </ul>
 </nav>
@@ -107,78 +116,109 @@
       <div class="mdc-layout-grid__cell--span-3-desktop mdc-layout-grid__cell--span-8-tablet mdc-layout-grid__cell--span-4-phone">
         <div class="crypto-widget">
           <h2 class="crypto-widget__heading mdc-typography--overline mdc-theme--primary">
-            <span class="crypto-widget__heading-text">Account overview</span>
+            <span class="crypto-widget__heading-text">BTC Wallet Overview</span>
             <span class="crypto-widget__heading-border"></span>
           </h2>
           <div class="crypto-widget__content">
             <div class="crypto-wallet-overview">
-              <h1 class="mdc-typography--headline2 crypto-margin-none crypto-display-flex mdc-theme--primary crypto-text-shadow crypto-wallet-overview__balance">0.00</h1>
-
-              <span class="crypto-wallet-overview__market-value mdc-theme--primary">USD</span>
+              <h1 class="mdc-typography--headline2 crypto-margin-none crypto-text-shadow mdc-theme--primary crypto-wallet-overview__value">0.81215</h1>
+              <span class="crypto-wallet-overview__stats crypto-wallet-overview__stats--up">12.4%</span>
+              <span class="crypto-wallet-overview__market-value">$5316.8</span>
+            </div>
+          </div>
+        </div>
+        <div class="crypto-widget">
+          <nav id="crypto-wallet-transaction" class="mdc-tab-bar">
+            <div class="mdc-tab-scroller">
+              <div class="mdc-tab-scroller__scroll-area">
+                <div class="mdc-tab-scroller__scroll-content">
+                  <a class="mdc-tab mdc-tab--active" role="tab" aria-selected="true" tabindex="0">
+                    <span class="mdc-tab__content">
+                      <span class="mdc-tab__text-label">Send</span>
+                    </span>
+                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </a>
+                  <a class="mdc-tab" role="tab" aria-selected="true" tabindex="0">
+                    <span class="mdc-tab__content">
+                      <span class="mdc-tab__text-label">Receive</span>
+                    </span>
+                    <span class="mdc-tab-indicator">
+                      <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <div id="wallet-form-tabs">
+            <div class="crypto-wallet-form-panel crypto-wallet-form-panel--active">
+              <form>
+                <div class="mdc-text-field mdc-text-field--fullwidth crypto-text-field--fullwidth mdc-text-field--dense mdc-text-field--with-trailing-icon crypto-margin-bottom-big">
+                  <input type="text" id="send-to" class="mdc-text-field__input">
+                  <label for="send-to" class="mdc-floating-label">Send to</label>
+                  <i class="material-icons mdc-text-field__icon" tabindex="0" role="button">person_outline</i>
+                  <div class="mdc-line-ripple"></div>
+                </div>
+                <div class="mdc-text-field mdc-text-field--fullwidth crypto-text-field--fullwidth mdc-text-field--dense crypto-margin-bottom-big">
+                  <input type="text" id="send-amount" class="mdc-text-field__input">
+                  <label for="send-amount" class="mdc-floating-label">Amount</label>
+                  <div class="mdc-line-ripple"></div>
+                </div>
+              </form>
+              <div class="crypto-wallet-form-panel--actions">
+                <a href="index.html" class="mdc-button">Send</a>
+              </div>
+            </div>
+            <div class="crypto-wallet-form-panel">
+              <form>
+                <div class="mdc-text-field mdc-text-field--fullwidth crypto-text-field--fullwidth mdc-text-field--dense mdc-text-field--with-trailing-icon crypto-margin-bottom-big">
+                  <input type="text" id="receive-from" class="mdc-text-field__input">
+                  <label for="receive-from" class="mdc-floating-label">Receive from</label>
+                  <i class="material-icons mdc-text-field__icon" tabindex="0" role="button">people_outline</i>
+                  <div class="mdc-line-ripple"></div>
+                </div>
+                <div class="mdc-text-field mdc-text-field--fullwidth crypto-text-field--fullwidth mdc-text-field--dense">
+                  <input type="text" id="receive-amount" class="mdc-text-field__input">
+                  <label for="receive-amount" class="mdc-floating-label">Amount</label>
+                  <div class="mdc-line-ripple"></div>
+                </div>
+              </form>
+              <div class="crypto-wallet-form-panel--actions">
+                <a href="index.html" class="mdc-button">Receive</a>
+              </div>
             </div>
           </div>
         </div>
         <div class="crypto-widget">
           <h2 class="crypto-widget__heading mdc-typography--overline mdc-theme--primary">
-            <span class="crypto-widget__heading-text">Wallets Overview</span>
+            <span class="crypto-widget__heading-text">BTC Market Price</span>
             <span class="crypto-widget__heading-border"></span>
           </h2>
           <div class="crypto-widget__content">
-            <ul class="crypto-border-list">
-              <li class="crypto-border-list__item crypto-border-list__item--large crypto-wallet ">
-                <!-- BTC WALLET -->
-                <a href="wallet.html" class="mdc-theme--on-surface">
-                  <h4 class="crypto-wallet__name mdc-typography--overline">BTC WALLET</h4>
-                  <h2 class="crypto-wallet__value mdc-typography--headline3">0.81215</h2>
-                  <span class="crypto-wallet__stats crypto-wallet__stats--up mdc-typography--caption">0.00%</span>
-                  <span class="crypto-wallet__market crypto-wallet__market--bitcoin mdc-typography--caption"></span>
-                  <span class="crypto-coin__border mdc-theme--primary-bg"></span>
-                  <span class="crypto-border-list__border-hover mdc-theme--secondary-bg"></span>
-                </a>
+            <ul class="crypto-price-list">
+              <li class="crypto-price-list__coin">
+                <span class="crypto-price-list__coin-name mdc-typography--overline">US DOLLARS</span>
+                <h3 class="crypto-price-list__coin-value mdc-theme--primary mdc-typography--subtitle1">$6,727.60</h3>
+                <span class="crypto-price-list__coin-performance mdc-typography--subtitle1 crypto-price-list__coin-performance--up">0.17%</span>
+                <span class="crypto-price-list__border mdc-theme--primary-bg"></span>
               </li>
-              <li class="crypto-border-list__item crypto-border-list__item--large crypto-wallet ">
-                <!-- BTC WALLET -->
-                <a href="wallet.html" class="mdc-theme--on-surface">
-                  <h4 class="crypto-wallet__name mdc-typography--overline">ETHER WALLET</h4>
-                  <h2 class="crypto-wallet__value mdc-typography--headline3">7.190</h2>
-                  <span class="crypto-wallet__stats crypto-wallet__stats--up mdc-typography--caption">0.00%</span>
-                  <span class="crypto-wallet__market crypto-wallet__market--ethereum mdc-typography--caption"></span>
-                  <span class="crypto-coin__border mdc-theme--primary-600-bg"></span>
-                  <span class="crypto-border-list__border-hover mdc-theme--secondary-bg"></span>
-                </a>
+              <li class="crypto-price-list__coin">
+                <span class="crypto-price-list__coin-name mdc-typography--overline">UK POUNDS</span>
+                <h3 class="crypto-price-list__coin-value mdc-theme--primary mdc-typography--subtitle1">$5,207.7</h3>
+                <span class="crypto-price-list__coin-performance mdc-typography--subtitle1 crypto-price-list__coin-performance--down">-0.45%</span>
+                <span class="crypto-price-list__border mdc-theme--primary-bg"></span>
               </li>
-              <li class="crypto-border-list__item crypto-border-list__item--large crypto-wallet ">
-                <!-- BTC WALLET -->
-                <a href="wallet.html" class="mdc-theme--on-surface">
-                  <h4 class="crypto-wallet__name mdc-typography--overline">LITECOIN WALLET</h4>
-                  <h2 class="crypto-wallet__value mdc-typography--headline3">32.730</h2>
-                  <span class="crypto-wallet__stats crypto-wallet__stats--up  mdc-typography--caption">0.00%</span>
-                  <span class="crypto-wallet__market crypto-wallet__market--litecoin mdc-typography--caption"></span>
-                  <span class="crypto-coin__border mdc-theme--primary-800-bg"></span>
-                  <span class="crypto-border-list__border-hover mdc-theme--secondary-bg"></span>
-                </a>
-              </li>
-              <li class="crypto-wallet crypto-wallet--new">
-                <a href="#" class="crypto-wallet crypto-wallet--new mdc-theme--on-surface">
-                  <h4 class="crypto-wallet__name mdc-typography--overline">+ ADD NEW</h4>
-                </a>
+              <li class="crypto-price-list__coin">
+                <span class="crypto-price-list__coin-name mdc-typography--overline">EUROS</span>
+                <h3 class="crypto-price-list__coin-value mdc-theme--primary mdc-typography--subtitle1">$5,760.2</h3>
+                <span class="crypto-price-list__coin-performance mdc-typography--subtitle1 crypto-price-list__coin-performance--up">0.05%</span>
+                <span class="crypto-price-list__border mdc-theme--primary-bg"></span>
               </li>
             </ul>
-          </div>
-        </div>
-
-        <div class="crypto-widget">
-          <h2 class="crypto-widget__heading mdc-typography--overline mdc-theme--primary">
-            <span class="crypto-widget__heading-text">Most Invested</span>
-            <span class="crypto-widget__heading-border"></span>
-          </h2>
-          <div class="crypto-widget__content">
-            <div class="crypto-wallet-overview">
-              <h1 class="mdc-typography--headline2 crypto-margin-none crypto-display-flex mdc-theme--primary crypto-text-shadow">54,825.42 <span class="mdc-typography--subtitle1">€</span></h1>
-
-              <span class="crypto-wallet-overview__market-value mdc-theme--primary">BTC</span>
-            </div>
-            <div id="chart-most-invested"></div>
           </div>
         </div>
       </div>
@@ -187,18 +227,18 @@
           <div class="mdc-layout-grid__inner">
             <div class="mdc-layout-grid__cell--span-6">
               <h2 class="crypto-widget__heading mdc-typography--overline mdc-theme--primary">
-                <span class="crypto-widget__heading-text">Live Updates</span>
+                <span class="crypto-widget__heading-text">Wallet Performance</span>
                 <span class="crypto-widget__heading-border"></span>
               </h2>
             </div>
             <div class="mdc-layout-grid__cell--span-6 crypto-hide-tablet crypto-hide-phone crypto-widget__actions">
-              <a href="#" class="mdc-button mdc-button--raised">Bitcoin</a>
-              <a href="#" class="mdc-button">Ethereum</a>
-              <a href="#" class="mdc-button">Litecoin</a>
+              <a href="index.html#" class="mdc-button data-weekly-refresh">Week</a>
+              <a href="index.html#" class="mdc-button data-monthly-refresh">Month</a>
+              <a href="index.html#" class="mdc-button data-yearly-refresh">Year</a>
             </div>
           </div>
           <div class="crypto-widget__content">
-            <div id="wallets-performance-chart"></div>
+            <div id="wallet-performance-chart"></div>
           </div>
         </div>
         <div class="crypto-widget">
@@ -245,7 +285,7 @@
                   <td class="mdl-data-table__cell--non-numeric">E9873HJKDFJSFHA</td>
                   <td>0.061BTC <span class="crypto-transactions-list__item-price">($445)</span></td>
                   <td class="mdl-data-table__cell--non-numeric crypto-transactions-list__status crypto-transactions-list__status--pending">Pending</td>
-                  <td><a href="#" class="crypto-transactions-list__item-toggle"><i class="material-icons">chevron_right</i></a></td>
+                  <td><a href="index.html#"><i class="material-icons">chevron_right</i></a></td>
                 </tr>
                 <tr class="crypto-transactions-list__item--details">
                   <td colspan="7">
@@ -293,7 +333,7 @@
                   <td class="mdl-data-table__cell--non-numeric">E9873HJKDFAWRZ</td>
                   <td>0.061BTC <span class="crypto-transactions-list__item-price">($455)</span></td>
                   <td class="mdl-data-table__cell--non-numeric crypto-transactions-list__status crypto-transactions-list__status--confirmed">Confirmed</td>
-                  <td><a href="#" class="crypto-transactions-list__item-toggle"><i class="material-icons">chevron_right</i></a></td>
+                  <td><a href="index.html#"><i class="material-icons">chevron_right</i></a></td>
                 </tr>
                 <tr class="crypto-transactions-list__item--details">
                   <td colspan="7">
@@ -341,7 +381,7 @@
                   <td class="mdl-data-table__cell--non-numeric">E9873HJKDFFIKGQ</td>
                   <td>0.061BTC <span class="crypto-transactions-list__item-price">($423)</span></td>
                   <td class="mdl-data-table__cell--non-numeric crypto-transactions-list__status crypto-transactions-list__status--confirmed">Confirmed</td>
-                  <td><a href="#" class="crypto-transactions-list__item-toggle"><i class="material-icons">chevron_right</i></a></td>
+                  <td><a href="index.html#"><i class="material-icons">chevron_right</i></a></td>
                 </tr>
                 <tr class="crypto-transactions-list__item--details">
                   <td colspan="7">
@@ -389,7 +429,7 @@
                   <td class="mdl-data-table__cell--non-numeric">E9873HJKDFPWRE</td>
                   <td>0.061BTC <span class="crypto-transactions-list__item-price">($411)</span></td>
                   <td class="mdl-data-table__cell--non-numeric crypto-transactions-list__status crypto-transactions-list__status--confirmed">Confirmed</td>
-                  <td><a href="#" class="crypto-transactions-list__item-toggle"><i class="material-icons">chevron_right</i></a></td>
+                  <td><a href="index.html#"><i class="material-icons">chevron_right</i></a></td>
                 </tr>
                 <tr class="crypto-transactions-list__item--details">
                   <td colspan="7">
@@ -437,7 +477,7 @@
                   <td class="mdl-data-table__cell--non-numeric">E9873HJKDFHFDE</td>
                   <td>0.061BTC <span class="crypto-transactions-list__item-price">($445)</span></td>
                   <td class="mdl-data-table__cell--non-numeric crypto-transactions-list__status crypto-transactions-list__status--confirmed">Confirmed</td>
-                  <td><a href="#" class="crypto-transactions-list__item-toggle"><i class="material-icons">chevron_right</i></a></td>
+                  <td><a href="index.html#"><i class="material-icons">chevron_right</i></a></td>
                 </tr>
                 <tr class="crypto-transactions-list__item--details">
                   <td colspan="7">
@@ -485,7 +525,7 @@
                   <td class="mdl-data-table__cell--non-numeric">E9873HJKDFMFGV</td>
                   <td>0.061BTC <span class="crypto-transactions-list__item-price">($478)</span></td>
                   <td class="mdl-data-table__cell--non-numeric crypto-transactions-list__status crypto-transactions-list__status--rejected">Rejected</td>
-                  <td><a href="#" class="crypto-transactions-list__item-toggle"><i class="material-icons">chevron_right</i></a></td>
+                  <td><a href="index.html#"><i class="material-icons">chevron_right</i></a></td>
                 </tr>
                 <tr class="crypto-transactions-list__item--details">
                   <td colspan="7">
@@ -533,7 +573,7 @@
                   <td class="mdl-data-table__cell--non-numeric">E9873HJKDFWMSO</td>
                   <td>0.061BTC <span class="crypto-transactions-list__item-price">($445)</span></td>
                   <td class="mdl-data-table__cell--non-numeric crypto-transactions-list__status crypto-transactions-list__status--confirmed">Confirmed</td>
-                  <td><a href="#" class="crypto-transactions-list__item-toggle"><i class="material-icons">chevron_right</i></a></td>
+                  <td><a href="index.html#"><i class="material-icons">chevron_right</i></a></td>
                 </tr>
                 <tr class="crypto-transactions-list__item--details">
                   <td colspan="7">
@@ -571,57 +611,12 @@
                 </tr>
               </tbody>
             </table>
-          </div><!-- cryto-widget end -->
-          <div class="mdc-snackbar mdc-elevation--z24"
-              aria-live="assertive"
-              aria-atomic="true"
-              aria-hidden="true">
-            <div class="mdc-snackbar__text"></div>
-            <div class="mdc-snackbar__action-wrapper">
-              <button type="button" class="mdc-snackbar__action-button"></button>
-            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 
-  <aside id="my-mdc-dialog"
-    class="mdc-dialog"
-    aria-labelledby="my-mdc-dialog-label"
-    aria-describedby="my-mdc-dialog-description">
-    <div class="mdc-dialog__surface">
-      <header class="mdc-dialog__header">
-        <h2 id="my-mdc-dialog-label" class="mdc-dialog__header__title">
-          Add A New Wallet
-        </h2>
-      </header>
-      <div id="my-mdc-dialog-description" class="mdc-dialog__body">
-        <div class="crypto-display-flex crypto-display-flex--end crypto-margin-bottom-big">
-          <div class="mdc-text-field crypto-display-flex__flexed mdc-text-field--fullwidth">
-            <input type="text" id="wallet-name" class="mdc-text-field__input" placeholder="Wallet Name">
-            <div class="mdc-line-ripple"></div>
-          </div>
-          <div class="mdc-select mdc-select-box crypto-coin-select" id="coin-select">
-            <select class="mdc-select__native-control">
-              <option value="btc" selected>BTC</option>
-              <option value="ghs">GHS</option>
-              <option value="bch">BCH</option>
-              <option value="btg">BTG</option>
-              <option value="eth">ETH</option>
-              <option value="dash">DASH</option>
-            </select>
-            <div class="mdc-line-ripple"></div>
-          </div>
-        </div>
-      </div>
-      <footer class="mdc-dialog__footer">
-        <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--cancel">Cancel</button>
-        <button type="button" class="mdc-button mdc-dialog__footer__button mdc-dialog__footer__button--accept mdc-dialog__action">Add</button>
-      </footer>
-    </div>
-    <div class="mdc-dialog__backdrop"></div>
-  </aside>
 
         </div>
 
@@ -673,7 +668,7 @@
     <script src="assets/js/partials/switcher.js"></script>
     <!-- page specific JS -->
     
-  <script src="assets/js/pages/index.js"></script>
+  <script src="assets/js/pages/wallet.js"></script>
 
 
   </body>
