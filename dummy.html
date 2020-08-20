@@ -11,29 +11,38 @@
 
 <body>
   <div class="container">
+    <div class="row">
+      <div class="col-4"></div>
+      <div class="col-6"><h1>MissingLink</h1></div>
+      <div class="col-2"></div>
+    </div>
+    <div class="row">
     <div class="col-2"></div>
-    <div class="col-8">
+    <div class="col-2">
+      <ul id="coinHistory">
+        <li>f</li>
+        <li>e</li>
+        <li>e</li>
+      </ul>
+    </div>
+    <div class="col-6">
       <div class="row">
-        <h1>CryptoDash</h1>
-        <input type="text" name="symbol" placeholder="BITSTAMP"  id="coin-name"> 
-        <select name="interval" id="interval">
-          <option value="today" id="today">Today</option>
-          <option value="week" id="week">Past Week</option>
-          <option value="month" id="month">Past Month</option>
-          <option value="quarter" id="quarter">Past Quarter</option>
-          <option value="year" id="year" selected>Past Year</option>
-        </select>
-        <input type="submit" id="submit">
+        <button id="btc">BTC</button>
+        <button id="link">LINK</button>
       </div>
       <div class="row">
-        <div id="chart"></div>
         <p id="index+price"></p>
       </div>
     </div>
     <div class="col-2"></div>
+    </div>
   </div>
-  <script src="https://raw.githubusercontent.com/wentin/ResponsifyJS/master/responsify.min.js"></script>
-  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <div id="chart-container" style="position: relative; height:40vh; width:80vw">
+
+    <canvas id="myChart" width="auto" height="auto"></canvas>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
   <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
   <script src="app.js"></script>
