@@ -4,7 +4,7 @@ const queryLINK = 'https://api.coingecko.com/api/v3/coins/chainlink/market_chart
 $(document).ready(btc());
 const ctx = document.getElementById('myChart').getContext('2d');
 let chart = new Chart(ctx, {
-    type:'line',
+    type: 'line',
     data: {
         labels: [],
         datasets: [{
@@ -12,7 +12,20 @@ let chart = new Chart(ctx, {
             data: [],
         }],
     },
-    options: {}
+    options: {
+        legend: {
+            display: false,
+        },
+        tooltips: {
+            // Disable the on-canvas tooltip
+            enabled: true,
+            element: function(context) {
+                var index = context.dataIndex;
+                var value = context.dataset.data[index];
+                return console.log(index, value);
+            }
+        }
+    }
 
 });
 
@@ -38,6 +51,7 @@ function btc() {
 
     })
 }
+
 function link() {
     $.ajax({
         url: queryLINK,
@@ -57,7 +71,6 @@ function link() {
 
     })
 }
-
 
 
 function addData(chart, label, data, point) {
