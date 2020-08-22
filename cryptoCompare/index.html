@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- add bootStrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="develop/style.css">
+    <title>Missing Link</title>
+</head>
+<body>
+    <div class="container">
+        <!-- create a card with the form for the user input on the left 4 columns col-md-4 -->
+        <div class="row">
+          <div class="col-sm-3 bg-input">
+            <h4>Search by Coin Abbreviation:</h4>
+            <form id="city-input">
+              <div><input type="text" id="city-name"></div>
+              <div><input type="submit"></div>
+            </form>
+          <div class="col-sm-8 coin-info">
+            <h4>Coin Info:</h4>
+            <div id="coinName"></div>
+            <div id="date"></div>
+          </div>
+        </div>
+        <!-- add jQuery -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <!-- add moment -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="develop/script.js"></script>
+</body>
+</html>
