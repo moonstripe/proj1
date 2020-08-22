@@ -1,5 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:coinapi" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:coinapi" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:coinapi" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/coinapi/d3graph" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="a212434e-da04-413e-ac55-4dece6b0a390" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
@@ -62,30 +99,55 @@
       <updated>1597875431936</updated>
       <workItem from="1597875434113" duration="14645000" />
       <workItem from="1597898299942" duration="172000" />
-      <workItem from="1597901541942" duration="3360000" />
+      <workItem from="1597901541942" duration="5215000" />
+      <workItem from="1598117844858" duration="10151000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/coinapi/d3graph" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
   <component name="WindowStateProjectService">
-    <state width="1899" height="269" key="GridCell.Tab.0.bottom" timestamp="1597901683247">
+    <state width="1899" height="269" key="GridCell.Tab.0.bottom" timestamp="1598043360697">
       <screen x="0" y="23" width="1920" height="992" />
     </state>
-    <state width="1899" height="269" key="GridCell.Tab.0.bottom/-1440.453.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1597901683247" />
-    <state width="1899" height="269" key="GridCell.Tab.0.center" timestamp="1597901683246">
+    <state width="1899" height="269" key="GridCell.Tab.0.bottom/-1440.453.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1598043360697" />
+    <state width="1899" height="269" key="GridCell.Tab.0.center" timestamp="1598043360696">
       <screen x="0" y="23" width="1920" height="992" />
     </state>
-    <state width="1899" height="269" key="GridCell.Tab.0.center/-1440.453.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1597901683246" />
-    <state width="1899" height="269" key="GridCell.Tab.0.left" timestamp="1597901683246">
+    <state width="1899" height="269" key="GridCell.Tab.0.center/-1440.453.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1598043360696" />
+    <state width="1899" height="269" key="GridCell.Tab.0.left" timestamp="1598043360695">
       <screen x="0" y="23" width="1920" height="992" />
     </state>
-    <state width="1899" height="269" key="GridCell.Tab.0.left/-1440.453.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1597901683246" />
-    <state width="1899" height="269" key="GridCell.Tab.0.right" timestamp="1597901683246">
+    <state width="1899" height="269" key="GridCell.Tab.0.left/-1440.453.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1598043360695" />
+    <state width="1899" height="269" key="GridCell.Tab.0.right" timestamp="1598043360696">
       <screen x="0" y="23" width="1920" height="992" />
     </state>
-    <state width="1899" height="269" key="GridCell.Tab.0.right/-1440.453.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1597901683246" />
+    <state width="1899" height="269" key="GridCell.Tab.0.right/-1440.453.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1598043360696" />
     <state width="1899" height="332" key="GridCell.Tab.1.bottom" timestamp="1597898278511">
       <screen x="0" y="23" width="1920" height="992" />
     </state>
@@ -143,10 +205,11 @@
       <screen x="0" y="23" width="1920" height="992" />
     </state>
     <state x="625" y="239" key="run.anything.popup/-1440.453.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1597901642997" />
-    <state x="625" y="256" width="670" height="721" key="search.everywhere.popup" timestamp="1597894240395">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state x="625" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1598128203149">
+      <screen x="0" y="23" width="1920" height="991" />
     </state>
     <state x="625" y="256" width="670" height="721" key="search.everywhere.popup/-1440.453.1440.826/0.23.1920.1057@0.23.1920.1057" timestamp="1597894240395" />
+    <state x="625" y="241" width="670" height="676" key="search.everywhere.popup/-1440.453.1440.877/0.23.1920.991@0.23.1920.991" timestamp="1598128203149" />
     <state x="625" y="242" width="670" height="676" key="search.everywhere.popup/-1440.453.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1597890379532" />
   </component>
 </project>
