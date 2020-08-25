@@ -34,6 +34,7 @@
   <link href="js/plugins/chartist-js/chartist.min.css" type="text/css" rel="stylesheet" media="screen,projection">
   <link href='https://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 <link rel="stylesheet" href="css/liMarquee.css">
 <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
@@ -47,13 +48,14 @@ $(window).on('load',function(){
 </script> 
 </head>
 
-<body>
- 
+<body></body>
 
-  <!-- //////////////////////////////////////////////////////////////////////////// -->
 
-  <!-- START HEADER -->
+<body id="home" class="scrollspy">
+
+  <!-- Navbar -->
   <header id="header" class="page-topbar">
+<<<<<<< Updated upstream
         <!-- start header nav-->
         <div class="navbar-fixed">
             <nav class="cyan">
@@ -76,81 +78,72 @@ $(window).on('load',function(){
                         <li><a href="#" data-activates="chat-out" class="waves-effect waves-block waves-light chat-collapse"><i class=""></i></a>
                         </li>
                     </ul>
-                </div>
-            </nav>
-       
-  </header>
-  <!-- END HEADER -->
-
-  <!-- //////////////////////////////////////////////////////////////////////////// -->
-
-  <!-- START MAIN -->
-  <div id="main">
-    <!-- START WRAPPER -->
-    <div class="wrapper">
-
-    
-      <!-- END LEFT SIDEBAR NAV-->
-
-      <!-- //////////////////////////////////////////////////////////////////////////// -->
-
-      <!-- START CONTENT -->
-      <section id="content">
-
-   
-
-
-        <!--start container-->
-        <div class="container">
-           
-        
-        
-            <style>
-                .contItem { display:inline-block; vertical-align:top; width:300px; padding:20px; white-space:normal;}
-                .contItemImage { width:100%;}
-                .contItemTitle { font:16px/1.2em Arial, Helvetica, sans-serif; display:block; padding:0 0 10px 0;}
-                .contItemText { font:16px/1.2em Arial, Helvetica, sans-serif; padding:20px 0; text-transform:none; text-align:left;}
-            </style>
-            <div class="conteiner">
+=======
+    <!-- start header nav-->
+    <div class="navbar-fixed">
+        <nav class="cyan">
+            <div class="nav-wrapper">                    
                 
-                <div class="str3-2 mWrap">
-                    <div class="contItem">
-                        <a href="#"><img src="pic/image.jpg" class="contItemImage"></a>
-                        <div class="contItemText">
-                            <a class="contItemTitle" href="https://decrypt.co/38625/how-a-second-wave-of-coronavirus-lockdowns-will-impact-bitcoin">Coronavirus and crypto</a> 
-                            How the global epidemic is affecting the blockchain and cryptocurrency industry.
-                        </div>
-                    </div>
-                    <div class="contItem">
-                        <a href="https://decrypt.co/38763/tethers-market-cap-breaks-12-billion-for-the-first-time"><img src="pic/image2.jpg" class="contItemImage"></a>
-                        <div class="contItemText">
-                            <a class="contItemTitle" href="#">A spotlight on Tether
-                                Analysis and quick takes on Tether</a> 
-                            Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                        </div>
-                    </div>
-                    <div class="contItem">
-                        <a href="#"><img src="pic/image3.jpg" class="contItemImage"></a>
-                        <div class="contItemText">
-                            <a class="contItemTitle" href="https://decrypt.co/39683/gnosis-safe-now-stores-more-than-1-billion-in-eth-and-erc20s">Gnosis Safe now stores more than $1 billion in ETH and ERC20s</a> 
-                            The multisig software wallet is used by individuals and companies alike, and it just broke a major milestone in collective holdings.
-                        </div>
-                    </div>
-                    <div class="contItem">
-                        <a href="#"><img src="pic/image4.jpg" class="contItemImage"></a>
-                        <div class="contItemText">
-                            <a class="contItemTitle" href="https://decrypt.co/39671/defi-teams-accused-of-hoarding-tokens-and-voting-power">DeFi teams accused of hoarding tokens and voting power</a> 
-                            As a new ecosystem of decentralized governance systems evolves, the idealistic quest for open and democratic systems is being tested.
-                        </div>
-                    </div>
-                    <div class="contItem">
-                        <a href="#"><img src="pic/image5.jpg" class="contItemImage"></a>
-                        <div class="contItemText">
-                            <a class="contItemTitle" href="https://decrypt.co/39662/bitcoin-is-now-harder-to-mine-than-ever">Bitcoin is now harder to mine than ever</a> 
-                            Bitcoin’s mining difficulty has struck an all-time high, but while some celebrate the milestone metric, retail miners could be in trouble.
-                        </div>
-                    </div>
+                <ul class="left">                      
+                  <i><h1 class="logo-wrapper"><a href="#" class="brand-logo darken-1"><img src="images/missing-link-logo.png" alt="materialize logo"></a></li>
+                </ul>
+                <div class="header-search-wrapper hide-on-med-and-down">
+
+                    <select onchange="this.form.submit()" name="currencies" id="currencies" style="display: block; color: black; width: 50%">
+                        <option value="BTC">Bitcoin</option>
+                        <option value="LTC">Litecoin</option>
+                        <option value="LINK">Chainlink</option>
+                        <option value="EOS">EOS</option>
+                        <option value="XRP">XRP</option>
+                        <option value="OMG">OMG Network</option>
+                        <option value="ETH">Ethereum</option>
+                        <option value="BCH">Bitcoin Cash</option>
+                        <option value="TRX">TRON</option>
+                        <option value="JST">JUST</option>
+                    </select>
+                    <button style="position: relative; left: 56%;bottom: 3.5em;" class="btn" type="submit" id="currencysubmit">Search</button>
+>>>>>>> Stashed changes
                 </div>
+    
+</nav>
+  </div>
+
+
+  <div id="index-banner" class="parallax-container parallax-header">
+    <div class="section">
+      <div class="container">
+        <br><br>
+        <h1 class="header center white-text text-lighten-2">Missing Link</h1>
+        <div class="row center">
+          <h5 class="header col s12 light">(I'd Like to put a modal here)</h5>
+        </div>
+
+      </div>
+    </div>
+    <div class="parallax"><img src="img/work.jpg" alt="Unsplashed background img 1"></div>
+  </div>
+
+
+<!-- About Us -->
+<section id="about" class="about scrollspy">
+  <div class="container">
+    <div class="row">
+      <style>
+        .contItem { display:inline-block; vertical-align:top; width:300px; padding:20px; white-space:normal;}
+        .contItemImage { width:100%;}
+        .contItemTitle { font:16px/1.2em Arial, Helvetica, sans-serif; display:block; padding:0 0 10px 0;}
+        .contItemText { font:16px/1.2em Arial, Helvetica, sans-serif; padding:20px 0; text-transform:none; text-align:left;}
+    </style>
+    <div class="conteiner">
+        
+        <div class="str3-2 mWrap">
+            <div class="contItem">
+                <a href="https://bitcoin.org/en/"><img src="pic/btc.svg" class="contItemImage"></a>
+                <div class="contItemText">
+                    <a class="contItemTitle" href="https://decrypt.co/38625/how-a-second-wave-of-coronavirus-lockdowns-will-impact-bitcoin">Coronavirus and crypto</a> 
+                    How the global epidemic is affecting the blockchain and cryptocurrency industry.
+                </div>
+<<<<<<< Updated upstream
           <div class="section">
            
 
@@ -166,67 +159,226 @@ $(window).on('load',function(){
                   <div class="sample-chart-wrapper">
                     <canvas id="line-chart-sample" height="120"></canvas>
                   </div>
-                </div>
-              </div>
+=======
             </div>
-
-            
-<section id="content">
-            <div class="divider"></div>
-            <!--Radar Chart-->
-            <div id="chartjs-radar-chart" class="section">
-              <h4 class="header">Radar Chart</h4>
-              <div class="row">
-                <div class="col s12 m4 l3">
-                  <p>A radar chart is a way of showing multiple data points and the variation between them.They are often useful for comparing the points of two or more different data sets.</p>
+            <div class="contItem">
+                <a href="https://decrypt.co/38763/tethers-market-cap-breaks-12-billion-for-the-first-time"><img src="pic/image2.jpg" class="contItemImage"></a>
+                <div class="contItemText">
+                    <a class="contItemTitle" href="#">A spotlight on Tether
+                        Analysis and quick takes on Tether</a> 
+                    Dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+>>>>>>> Stashed changes
                 </div>
-                <div class="col s12 m8 l9">
-                  <div class="sample-chart-wrapper">
-                    <canvas id="radar-chart-sample" height="120"></canvas>
-                  </div>
-                </div>
-              </div>
             </div>
-
-        
+            <div class="contItem">
+                <a href="#"><img src="pic/image3.jpg" class="contItemImage"></a>
+                <div class="contItemText">
+                    <a class="contItemTitle" href="https://decrypt.co/39683/gnosis-safe-now-stores-more-than-1-billion-in-eth-and-erc20s">Gnosis Safe now stores more than $1 billion in ETH and ERC20s</a> 
+                    The multisig software wallet is used by individuals and companies alike, and it just broke a major milestone in collective holdings.
+                </div>
+            </div>
+            <div class="contItem">
+                <a href="#"><img src="pic/image4.jpg" class="contItemImage"></a>
+                <div class="contItemText">
+                    <a class="contItemTitle" href="https://decrypt.co/39671/defi-teams-accused-of-hoarding-tokens-and-voting-power">DeFi teams accused of hoarding tokens and voting power</a> 
+                    As a new ecosystem of decentralized governance systems evolves, the idealistic quest for open and democratic systems is being tested.
+                </div>
+            </div>
+            <div class="contItem">
+                <a href="#"><img src="pic/image5.jpg" class="contItemImage"></a>
+                <div class="contItemText">
+                    <a class="contItemTitle" href="https://decrypt.co/39662/bitcoin-is-now-harder-to-mine-than-ever">Bitcoin is now harder to mine than ever</a> 
+                    Bitcoin’s mining difficulty has struck an all-time high, but while some celebrate the milestone metric, retail miners could be in trouble.
+                </div>
+            </div>
+            <div class="contItem">
+              <a href="#"><img src="pic/image6.jpg" class="contItemImage"></a>
+              <div class="contItemText">
+                  <a class="contItemTitle" href="https://decrypt.co/39662/bitcoin-is-now-harder-to-mine-than-ever">Bitcoin is now harder to mine than ever</a> 
+                  Bitcoin’s mining difficulty has struck an all-time high, but while some celebrate the milestone metric, retail miners could be in trouble.
+              </div>
+          </div>
+          <div class="contItem">
+            <a href="#"><img src="pic/image7.jpg" class="contItemImage"></a>
+            <div class="contItemText">
+                <a class="contItemTitle" href="https://decrypt.co/39662/bitcoin-is-now-harder-to-mine-than-ever">Bitcoin is now harder to mine than ever</a> 
+                Bitcoin’s mining difficulty has struck an all-time high, but while some celebrate the milestone metric, retail miners could be in trouble.
+            </div>
         </div>
-        <!--end container-->
-</section>
-      </section>
-      <!-- END CONTENT -->
-
-      <!-- //////////////////////////////////////////////////////////////////////////// -->
-      
-
+        <div class="contItem">
+          <a href="#"><img src="pic/image8.jpg" class="contItemImage"></a>
+          <div class="contItemText">
+              <a class="contItemTitle" href="https://decrypt.co/39662/bitcoin-is-now-harder-to-mine-than-ever">Bitcoin is now harder to mine than ever</a> 
+              Bitcoin’s mining difficulty has struck an all-time high, but while some celebrate the milestone metric, retail miners could be in trouble.
+          </div>
+      </div>
+      <div class="contItem">
+        <a href="#"><img src="pic/image9.jpg" class="contItemImage"></a>
+        <div class="contItemText">
+            <a class="contItemTitle" href="https://decrypt.co/39662/bitcoin-is-now-harder-to-mine-than-ever">Bitcoin is now harder to mine than ever</a> 
+            Bitcoin’s mining difficulty has struck an all-time high, but while some celebrate the milestone metric, retail miners could be in trouble.
+        </div>
     </div>
-    <!-- END WRAPPER -->
-
+        </div>
+        </div>
+    </div> 
   </div>
-  <!-- END MAIN -->
+</section>
+<!--  -->
+
+
+<!-- Services -->
+<section id="services" style="background-color: #B8A0EA;">
+  <div class="section">
+
+
+    <div class="divider"></div>
+    <!--chartjs-->
+    <div id="chartjs" class="section">
+
+<<<<<<< Updated upstream
+        
+=======
+
+      <div class="row">
+    
+        <div class="col s12 m12 l12">
+            <div id="chart-container" style="position: relative;">
+
+                <canvas id="myChart" width="auto" height="auto"></canvas>
+            </div>
+>>>>>>> Stashed changes
+        </div>
+      </div>
+    </div>
+</section>
+<!--  -->
+
+
+  
 
 
 
-  <!-- //////////////////////////////////////////////////////////////////////////// -->
+   
+<!--  -->
 
+
+<!-- Contact -->
+
+<section id="contact" class="contact scrollspy grey lighten-3">
+  <div class="container">
+    <h3 class="light grey-text text-darken-3 center"> Contact Us</h3>
+    <div class="row">
+      <div class="cd1 col m5 s12">
+        <div class="card-panel pink darken-4 center white-text">
+          <i class="material-icons">email</i>
+          <h5>Contact</h5>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+        </div>
+
+      <ul class="collection with-header">
+        <li class="collection-header"><h3>Our Office</h3></li>
+        <li class="collection-item">Company Name</li>
+        <li class="collection-item">Adress : Missing Link</li>
+        <li class="collection-item">Phone : +555-5555-5555</li>
+        <li class="collection-item">Email : info@reverbdesigns.com</li>
+      </ul>
+     
+      </div>
+
+      <div class="cd2 col m7 s12">
+        <form>
+          <div class="card-panel">
+            <h5>Please fill out this form</h5>
+              <div class="input-field">
+                <input id="name" type="text" required>
+                <label for="name">Name</label>
+              </div>
+              <div class="input-field">
+                <input id="address" type="text" required>
+                <label for="address">Address</label>
+              </div>
+              <div class="input-field">
+                <input id="email" type="email" class="validate" required>
+                <label for="email">Email</label>
+              </div>
+              <div class="input-field">
+                <input id="phone" type="text" required>
+                <label for="phone">Phone Number</label>
+              </div>
+              <div class="input-field">
+                <textarea name="message" id="message" class="materialize-textarea" required=""></textarea>
+                <label for="message">Message</label>
+          </div>
+          <button type="submit" onclick="M.toast({html: '<strong>Message Sent !</strong>', classes: 'rounded, blue'})" class="btn pink darken-4 waves-effect waves-light">Send Message<i class="material-icons right">send</i></button>
+      </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--  -->
+
+
+
+<<<<<<< Updated upstream
   <!-- START FOOTER -->
   <footer class="page-footer">
     <div class="footer-copyright">
       <div class="container">
         <span style="color:black;">Project 1 BCS <a class="grey-text text-lighten-4" href="https://github.com/moonstripe11/proj1" target="_blank">Work Repo</a> Work in Progress.</span>
         <span class="right" style="color:black;"> <h3 class="right" style="color:black;padding-bottom: 15px;">Design and Developed by Allie Bauer, Kojin Glick , Andrew Segre and Jordan Bell</h3> <a class="grey-text text-lighten-4" href="http://bootcampspot.com/" style="color:black;">     Missing Link</a></span>
+=======
+<!-- Floating Button -->
+
+<div class="fixed-action-btn">
+  <a class="btn-floating btn-large waves-effect waves-light blue pulse">
+    <i class="large material-icons">menu</i>
+  </a>
+  <ul>
+    <li><a onclick="M.toast({html: '<strong>Home</strong>', classes: 'rounded, blue'})" class="btn-floating red" href="#home"><i class="material-icons">arrow_upward</i></a></li>
+    <li><a class="btn-floating yellow darken-1"><i class="material-icons">format_quote</i></a></li>
+    <li><a class="btn-floating green"><i class="material-icons">person_pin</i></a></li>
+    <li><a class="btn-floating cyan"><i class="material-icons">attach_file</i></a></li>
+  </ul>
+</div>
+
+<!--  -->
+
+
+  <footer class="page-footer pink">
+    <div class="container">
+      <div class="row">
+        <div class="col s12 center">
+          <p class="grey-text text-lighten-4">Twitter . Facebook . Instagram</p>
+>>>>>>> Stashed changes
         </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">&copy; Copyright 202020 | by Kojin Glick Andrew Segre Allie Bauer & Jordan Bell
+      <a class="black-text text-lighten-4 right" href="http://materializecss.com">CSS Framework by MaterializeCSS</a>
+      </div>
     </div>
   </footer>
-  <!-- END FOOTER -->
 
 
-
+<<<<<<< Updated upstream
     <!-- ================================================
     Scripts
     ================================================ -->
     
     <!--materialize js-->
     <script type="text/javascript" src="js/materialize.min.js"></script>
+=======
+  <!--  Scripts-->
+  <script src="js/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script src="js/script.js"></script>
+
+>>>>>>> Stashed changes
     <!--scrollbar-->
     <script type="text/javascript" src="js/plugins/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     
@@ -240,6 +392,39 @@ $(window).on('load',function(){
 
     <!--plugins.js - Some Specific JS codes for Plugin Settings-->
     <script type="text/javascript" src="js/plugins.js"></script>
+<<<<<<< Updated upstream
 </body>
+=======
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="js/app.js"></script>
+>>>>>>> Stashed changes
+
+  <script>
+
+    const slider = document.querySelectorAll('.slider');
+    M.Slider.init(slider, {
+      indicators: false,
+      height: 500,
+      transition: 600,
+      interval: 3000
+    });
+
+    const materialbox = document.querySelectorAll('.materialboxed');
+    M.Materialbox.init(materialbox);
+
+    const scroll = document.querySelectorAll('.scrollspy');
+    M.ScrollSpy.init(scroll, {
+      scrollOffset: 46
+    });
+
+    const floating = document.querySelectorAll('.fixed-action-btn');
+    M.FloatingActionButton.init(floating, {
+      direction: 'left'
+    });
+
+  </script>
+
+  </body>
 </html>
