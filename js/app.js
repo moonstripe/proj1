@@ -162,7 +162,7 @@ function firstPull(coinName) {
 }
 
 function pullArticles(coinName) {
-    let requestURL = `https://newsapi.org/v2/everything?q=${coinName}&apiKey=1b4fa439d5b04275a60ab73d2a80dfba&domains=decrypt.co,cointelegraph.com,coindesk.com&from=${since.format('YYYY-MM-DD')}&to=${moment().format('YYYY-MM-DD')}&language=en&sortBy=relevancy`;
+    let requestURL = `https://cors-anywhere.herokuapp.com/newsapi.org/v2/everything?q=${coinName}&apiKey=1b4fa439d5b04275a60ab73d2a80dfba&domains=decrypt.co,cointelegraph.com,coindesk.com&from=${since.format('YYYY-MM-DD')}&to=${moment().format('YYYY-MM-DD')}&language=en&sortBy=relevancy`;
 
     $.ajax({
         url: requestURL,
