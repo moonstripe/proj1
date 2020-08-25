@@ -64,7 +64,8 @@ $(window).on('load',function(){
                       <li><h1 class="logo-wrapper"><a href="#" class="brand-logo darken-1"><img src="images/missing-link-logo.png" alt="materialize logo"></a> <span class="logo-text">Missing Link</span></h1></li>
                     </ul>
                     <div class="header-search-wrapper hide-on-med-and-down">
-                        <select name="currencies" id="currencies" style="display: block; color: black">
+
+                        <select onchange="this.form.submit()" name="currencies" id="currencies" style="display: block; color: black; width: 50%">
                             <option value="BTC">Bitcoin</option>
                             <option value="LTC">Litecoin</option>
                             <option value="LINK">Chainlink</option>
@@ -76,7 +77,7 @@ $(window).on('load',function(){
                             <option value="TRX">TRON</option>
                             <option value="JST">JUST</option>
                         </select>
-                        <button type="submit" id="currencysubmit">Search</button>
+                        <button class="btn" type="submit" id="currencysubmit">Search</button>
                     </div>
                     <ul class="right hide-on-med-and-down">                        
                         <li><a href="javascript:void(0);" class="waves-effect waves-block waves-light toggle-fullscreen"><i class="mdi-action-settings-overscan"></i></a>
