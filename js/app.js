@@ -1,5 +1,4 @@
 const since = moment().subtract(30, 'days');
-console.log(since.format("YYYY-MM-DD"));
 let coinName = "BTC";
 
 const xbakey = "M2M1ZWE1MzEwNWUzNGZhNmE5MWNiMDBmMGEwZTI5Y2U";
@@ -62,7 +61,6 @@ let chart = new Chart(ctx, {
             },
             enabled: false,
             custom: function(tooltipModel) {
-                console.log(tooltipModel)
                 // Tooltip Element
                 var tooltipEl = document.getElementById('chartjs-tooltip');
 
@@ -112,9 +110,8 @@ let chart = new Chart(ctx, {
                     innerHtml += '</thead><tbody>';
 
                     bodyLines.forEach(function(body, i) {
-                        console.log(body);
+
                         var colors = tooltipModel.labelColors[i];
-                        console.log(tooltipModel.labelColors[i]);
                         var style = 'background:' + colors.backgroundColor;
                         style += '; border-color:' + colors.borderColor;
                         style += '; border-width: 2px';
@@ -148,7 +145,6 @@ let chart = new Chart(ctx, {
 });
 firstPull('BTC');
 
-console.log(chart.data);
 $('#currencysubmit').on('click', function () {
     $("#chartjs-tooltip").css({opacity: 0});
     let coinName = $(this).siblings("select").val();
@@ -168,9 +164,7 @@ function pullArticles(coinName) {
         url: requestURL,
         method: "GET"
     }).then(function(response) {
-        console.log(response)
         articles = response.articles;
-        console.log(articles);
 
     })
 }
