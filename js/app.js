@@ -44,7 +44,7 @@ let chart = new Chart(ctx, {
         }],
     },
     options: {
-        // events: ["click", "mouseout"],
+        // events: ["mouseon"],
         // elements: {
         //     point: {
         //         radius: 5,
@@ -114,7 +114,7 @@ let chart = new Chart(ctx, {
                     titleLines.forEach(function(title) {
                         for (let i = 0; i < articles.length; i++) {
                             if (title === moment(articles[i].publishedAt).format('YYYY-MM-DD')) {
-                                innerHtml += '<tr><th position=relative style="background-color: transparent;">' + `<a href=${articles[i].url} target="_blank"><img src="${articles[i].urlToImage}"; position=absolute; width="100px" style="padding-right: 10px;"/></a>` + '</th><td>' + `<a href=${articles[i].url} target="_blank" style="line-height: 1">${articles[i].title}</a>`+ `<p>${articles[i].source.name}</p>` + '</td></tr>';
+                                innerHtml += '<tr style="border-top: 1px solid #d0d0d0;"><th position=relative style="background-color: transparent;">' + `<a href=${articles[i].url} target="_blank"><img src="${articles[i].urlToImage}"; position=absolute; width="100px" style="padding-right: 10px;"/></a>` + '</th><td>' + `<a href=${articles[i].url} target="_blank" style="line-height: 1">${articles[i].title}</a>`+ `<p>${articles[i].source.name}</p>` + '</td></tr>';
 
                             }
 
