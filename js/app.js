@@ -101,8 +101,8 @@ let chart = new Chart(ctx, {
                     titleLines.forEach(function(title) {
                         for (let i = 0; i < articles.length; i++) {
                             if (title === moment(articles[i].publishedAt).format('YYYY-MM-DD')) {
+                                innerHtml += '<tr><th position=relative style="background-color: transparent;">' + `<a href=${articles[i].url} target="_blank"><img src="${articles[i].urlToImage}"; position=absolute; width="100px" style="padding-right: 10px;"/></a>` + '</th><td>' + `<a href=${articles[i].url} target="_blank" style="line-height: 1">${articles[i].title}</a>`+ `<p>${articles[i].source.name}</p>` + '</td></tr>';
 
-                                innerHtml += '<tr><th position=relative>' + `<img src="${articles[i].urlToImage}"; position=absolute; width="100px"/>` + '</th><td>' + `<a href=${articles[i].url} target="_blank">${articles[i].title}</a>`+ '</td></tr>';
                             }
 
                         }
@@ -145,11 +145,13 @@ let chart = new Chart(ctx, {
 });
 firstPull('BTC');
 
+
 $('#currencysubmit').on('click', function () {
     $("#chartjs-tooltip").css({opacity: 0});
     let coinName = $(this).siblings("select").val();
     searchCoin(coinName);
     pullArticles(fullName(coinName).replace(' ', ''));
+
 });
 
 function firstPull(coinName) {
