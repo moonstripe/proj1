@@ -174,7 +174,7 @@ function firstPull(coinName) {
 }
 
 function totalSearch(coinName) {
-    let requestURL = `https://cors-anywhere.herokuapp.com/newsapi.org/v2/everything?q=${fullName(coinName).replace(' ', '')}&apiKey=1b4fa439d5b04275a60ab73d2a80dfba&domains=decrypt.co,cointelegraph.com,coindesk.com&from=${since.format('YYYY-MM-DD')}&to=${moment().format('YYYY-MM-DD')}&language=en&sortBy=relevancy`;
+    let requestURL = `https://cors-anywhere.herokuapp.com/newsapi.org/v2/everything?qInTitle=${fullName(coinName).replace(' ', '')}&apiKey=1b4fa439d5b04275a60ab73d2a80dfba&domains=decrypt.co,cointelegraph.com,coindesk.com&from=${since.format('YYYY-MM-DD')}&to=${moment().format('YYYY-MM-DD')}&language=en&sortBy=relevancy`;
     console.log(requestURL);
     $.ajax({
         url: requestURL,
@@ -299,6 +299,9 @@ function fullName(coinName) {
     switch(coinName) {
         case "BTC":
             fN = "Bitcoin";
+            break;
+        case "ETH":
+            fN = "Ethereum";
             break;
         case "LTC":
             fN = "Litecoin";
