@@ -44,7 +44,7 @@ let chart = new Chart(ctx, {
         }],
     },
     options: {
-        // events: ["click", "mouseout"],
+        // events: ["mouseon"],
         // elements: {
         //     point: {
         //         radius: 5,
