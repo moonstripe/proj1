@@ -110,7 +110,6 @@ let chart = new Chart(ctx, {
 
                     var innerHtml = '<thead>';
 
-                    console.log(titleLines);
 
                     titleLines.forEach(function(title) {
                         for (let i = 0; i < articles.length; i++) {
@@ -143,9 +142,18 @@ let chart = new Chart(ctx, {
 
                 // Display, position, and set styles for font
                 tooltipEl.style.opacity = 1;
+                tooltipEl.style.width = '370px';
                 tooltipEl.style.backgroundColor = "rgba(255,255,255,0.7)";
                 tooltipEl.style.position = 'absolute';
-                tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
+                console.log(tooltipModel.caretX > window.innerWidth/2);
+                if (tooltipModel.caretX > window.innerWidth/2) {
+                    tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX - 370 + 'px';
+                } else {
+                    tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
+                }
+                console.log(tooltipEl.style);
+
+
                 tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
                 tooltipEl.style.fontFamily = tooltipModel._bodyFontFamily;
                 tooltipEl.style.fontSize = tooltipModel.bodyFontSize + 'px';
