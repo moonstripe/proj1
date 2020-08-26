@@ -175,7 +175,7 @@ function firstPull(coinName) {
 
 function totalSearch(coinName) {
     let requestURL = `https://cors-anywhere.herokuapp.com/newsapi.org/v2/everything?q=${fullName(coinName).replace(' ', '')}&apiKey=1b4fa439d5b04275a60ab73d2a80dfba&domains=decrypt.co,cointelegraph.com,coindesk.com&from=${since.format('YYYY-MM-DD')}&to=${moment().format('YYYY-MM-DD')}&language=en&sortBy=relevancy`;
-
+    console.log(requestURL);
     $.ajax({
         url: requestURL,
         method: "GET"
@@ -205,7 +205,7 @@ function totalSearch(coinName) {
 
                     }
                 }
-                pRs.push(pR**expFact);
+                pRs.push(pR**expFact > 10 ? 10 : pR**expFact);
                 pBCs.push(pBC);
                 prices.push(instance.close);
 
