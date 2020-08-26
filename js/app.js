@@ -40,19 +40,31 @@ let chart = new Chart(ctx, {
             data: [
 
             ],
+            pointRadius: [],
         }],
     },
     options: {
         // events: ["click", "mouseout"],
-        elements: {
-            point: {
-                radius: 5,
-                hoverRadius: 10,
-            },
-        },
+        // elements: {
+        //     point: {
+        //         radius: 5,
+        //         hoverRadius: 10,
+        //     },
+        // },
 
         legend: {
             display: false,
+        },
+        scales: {
+            yAxes: [{
+                ticks: {
+                    // Include a dollar sign in the ticks
+                    callback: function(value, index, values) {
+                        return '$' + value;
+                    }
+                }
+            }]
+
         },
 
         tooltips: {
@@ -98,6 +110,8 @@ let chart = new Chart(ctx, {
 
                     var innerHtml = '<thead>';
 
+                    console.log(titleLines);
+
                     titleLines.forEach(function(title) {
                         for (let i = 0; i < articles.length; i++) {
                             if (title === moment(articles[i].publishedAt).format('YYYY-MM-DD')) {
@@ -129,7 +143,7 @@ let chart = new Chart(ctx, {
 
                 // Display, position, and set styles for font
                 tooltipEl.style.opacity = 1;
-                tooltipEl.style.backgroundColor = "rgba(255,255,255,0.7)"
+                tooltipEl.style.backgroundColor = "rgba(255,255,255,0.7)";
                 tooltipEl.style.position = 'absolute';
                 tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX + 'px';
                 tooltipEl.style.top = position.top + window.pageYOffset + tooltipModel.caretY + 'px';
@@ -149,53 +163,114 @@ firstPull('BTC');
 $('#currencysubmit').on('click', function () {
     $("#chartjs-tooltip").css({opacity: 0});
     let coinName = $(this).siblings("select").val();
-    searchCoin(coinName);
-    pullArticles(fullName(coinName).replace(' ', ''));
+    totalSearch(coinName);
+
 
 });
 
 function firstPull(coinName) {
-    searchCoin(coinName);
-    pullArticles(fullName(coinName));
+    totalSearch(coinName);
+    console.log(chart.data.datasets);
 }
 
-function pullArticles(coinName) {
-    let requestURL = `https://cors-anywhere.herokuapp.com/newsapi.org/v2/everything?q=${coinName}&apiKey=1b4fa439d5b04275a60ab73d2a80dfba&domains=decrypt.co,cointelegraph.com,coindesk.com&from=${since.format('YYYY-MM-DD')}&to=${moment().format('YYYY-MM-DD')}&language=en&sortBy=relevancy`;
+function totalSearch(coinName) {
+    let requestURL = `https://cors-anywhere.herokuapp.com/newsapi.org/v2/everything?q=${fullName(coinName).replace(' ', '')}&apiKey=1b4fa439d5b04275a60ab73d2a80dfba&domains=decrypt.co,cointelegraph.com,coindesk.com&from=${since.format('YYYY-MM-DD')}&to=${moment().format('YYYY-MM-DD')}&language=en&sortBy=relevancy`;
 
     $.ajax({
         url: requestURL,
         method: "GET"
     }).then(function(response) {
+        articles = [];
         articles = response.articles;
+        let query = `https://min-api.cryptocompare.com/data/v2/histoday?fsym=${coinName}&tsym=USD&limit=30&api_key=34de05666031e3401bfffe94b769a8ea1f882ee33fe676469823cfefda050b2e`;
+        $.ajax({
+            url: query,
 
-    })
-}
+            method: "GET"
+        }).then(function (response) {
 
-function searchCoin(coinName) {
-    let query = `https://min-api.cryptocompare.com/data/v2/histoday?fsym=${coinName}&tsym=USD&limit=30&api_key=34de05666031e3401bfffe94b769a8ea1f882ee33fe676469823cfefda050b2e`;
-    $.ajax({
-        url: query,
+            let times = [];
+            let prices = [];
+            let pRs = [];
+            let pBCs = [];
+            response.Data.Data.forEach(function (instance) {
+                let pR = 2;
+                let expFact = 0;
+                let pBC = 'black';
+                times.push(moment.unix(instance.time).format('YYYY-MM-DD'));
+                for (let i = 0; i < articles.length; i++) {
+                    if (moment.unix(instance.time).format('YYYY-MM-DD') === moment(articles[i].publishedAt).format('YYYY-MM-DD')){
+                        expFact++;
+                        pBC = 'red';
 
-        method: "GET"
-    }).then(function (response) {
+                    }
+                }
+                pRs.push(pR**expFact);
+                pBCs.push(pBC);
+                prices.push(instance.close);
 
-        let times = [];
-        let prices = [];
-        response.Data.Data.forEach(function (instance) {
+            })
+            removeData(chart);
+            addData(chart, times, prices, coinName, pRs, pBCs);
 
-            times.push(moment.unix(instance.time).format('YYYY-MM-DD'));
-            prices.push(instance.close);
 
         })
-        removeData(chart);
-        addData(chart, times, prices, coinName);
 
     })
-
 }
 
 
-function addData(chart, label, data, point) {
+
+
+// function pullArticles(coinName) {
+//     let requestURL = `https://cors-anywhere.herokuapp.com/newsapi.org/v2/everything?q=${coinName}&apiKey=1b4fa439d5b04275a60ab73d2a80dfba&domains=decrypt.co,cointelegraph.com,coindesk.com&from=${since.format('YYYY-MM-DD')}&to=${moment().format('YYYY-MM-DD')}&language=en&sortBy=relevancy`;
+//
+//     $.ajax({
+//         url: requestURL,
+//         method: "GET"
+//     }).then(function(response) {
+//         articles = [];
+//         articles = response.articles;
+//
+//     })
+// }
+
+// function searchCoin(coinName) {
+//     let query = `https://min-api.cryptocompare.com/data/v2/histoday?fsym=${coinName}&tsym=USD&limit=30&api_key=34de05666031e3401bfffe94b769a8ea1f882ee33fe676469823cfefda050b2e`;
+//     $.ajax({
+//         url: query,
+//
+//         method: "GET"
+//     }).then(function (response) {
+//
+//         let times = [];
+//         let prices = [];
+//         let pRs = [];
+//         response.Data.Data.forEach(function (instance) {
+//             let pR = 0;
+//             times.push(moment.unix(instance.time).format('YYYY-MM-DD'));
+//             console.log(articles);
+//             for (let i = 0; i < articles.length; i++) {
+//                 console.log(moment.unix(instance.time).format('YYYY-MM-DD') === moment(articles[i].publishedAt));
+//                 if (moment.unix(instance.time).format('YYYY-MM-DD') === moment(articles[i].publishedAt).format('YYYY-MM-DD')){
+//                     pR++;
+//                 }
+//             }
+//             pRs.push(pR);
+//             prices.push(instance.close);
+//
+//         })
+//         removeData(chart);
+//         addData(chart, times, prices, coinName, pRs);
+//
+//         console.log(pRs);
+//
+//     })
+//
+// }
+
+
+function addData(chart, label, data, point, pRs, pBCs) {
     chart.data.keepShowing=[];
     chart.data.labels = label;
 
@@ -205,6 +280,8 @@ function addData(chart, label, data, point) {
     chart.data.datasets.push({
         label: point,
         data: data,
+        pointRadius: pRs,
+        pointBorderColor: pBCs,
     });
 
 
