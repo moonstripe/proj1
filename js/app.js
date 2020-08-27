@@ -127,7 +127,7 @@ let chart = new Chart(ctx, {
                 tooltipEl.style.width = '370px';
                 tooltipEl.style.backgroundColor = "rgba(255,255,255,0.7)";
                 tooltipEl.style.position = 'absolute';
-                console.log(tooltipModel.caretX > window.innerWidth/2);
+
                 if (tooltipModel.caretX > window.innerWidth/2) {
                     tooltipEl.style.left = position.left + window.pageXOffset + tooltipModel.caretX - 370 + 'px';
                 } else {
