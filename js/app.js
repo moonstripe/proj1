@@ -26,7 +26,7 @@ let chart = new Chart(ctx, {
         }],
     },
     options: {
-        // events: ["mouseon"],
+        events: ["click", "mousemove"],
         // elements: {
         //     point: {
         //         radius: 5,
@@ -199,7 +199,7 @@ function totalSearch(coinName) {
             let pRs = [];
             let pBCs = [];
             response.Data.Data.forEach(function (instance) {
-                let pR = 2;
+                let pR = 3;
                 let expFact = 0;
                 let pBC = 'black';
                 times.push(moment.unix(instance.time).format('YYYY-MM-DD'));
@@ -210,7 +210,7 @@ function totalSearch(coinName) {
 
                     }
                 }
-                pRs.push(pR**expFact > 10 ? 10 : pR**expFact);
+                pRs.push(pR**expFact > 27 ? 27 : pR**expFact);
                 pBCs.push(pBC);
                 prices.push(instance.close);
 
