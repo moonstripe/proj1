@@ -7,26 +7,8 @@ const query = `https://min-api.cryptocompare.com/data/v2/histoday?fsym=${coinNam
 const queryBTC = `https://apiv2.bitcoinaverage.com/indices/global/history/${coinName}USD?since=${since.unix()}&resolution=day`;
 const queryLINK = 'https://api.coingecko.com/api/v3/coins/chainlink/market_chart?vs_currency=USD&days=90';
 let articles = [];
-const newsData = {
-    "status": "ok",
-    "totalResults": 184,
-    "articles": [
-        {
-            "source": {
-                "id": "the-verge",
-                "name": "The Verge"
-            },
-            "author": "Makena Kelly",
-            "title": "Coinbase says it halted more than $280,000 in bitcoin transactions during Twitter hack",
-            "description": "The cryptocurrency exchange Coinbase said that it stopped around 1,100 customers from sending bitcoin to hackers who gained access to high-profile Twitter accounts.",
-            "url": "https://www.theverge.com/2020/7/20/21331499/coinbase-twitter-hack-elon-musk-bill-gates-joe-biden-bitcoin-scam",
-            "urlToImage": "https://cdn.vox-cdn.com/thumbor/j9doeI17eouZs-YIK4CCrW4nVSg=/0x146:2040x1214/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/20086189/acastro_200715_1777_twitter_0002.0.jpg",
-            "publishedAt": "2020-07-20T18:08:56Z",
-            "content": "The company blacklisted the bitcoin address\r\nIllustration by Alex Castro\r\nThe cryptocurrency exchange Coinbase said that it stopped around 1,100 customers from sending bitcoin to hackers who gained a… [+1775 chars]"
-        }]};
-const requestURL = `https://newsapi.org/v2/everything?q=${coinName}ANDcrypto&apiKey=1b4fa439d5b04275a60ab73d2a80dfba&from=${since.format('YYYY-MM-DD')}&to=${moment().format('YYYY-MM-DD')}&language=en&sortBy=relevancy`;
 
-// news api pull
+const requestURL = `https://newsapi.org/v2/everything?q=${coinName}ANDcrypto&apiKey=1b4fa439d5b04275a60ab73d2a80dfba&from=${since.format('YYYY-MM-DD')}&to=${moment().format('YYYY-MM-DD')}&language=en&sortBy=relevancy`;
 
 
 const ctx = document.getElementById('myChart').getContext('2d');
@@ -168,13 +150,28 @@ let chart = new Chart(ctx, {
 firstPull('BTC');
 
 
-$('#currencysubmit').on('click', function () {
+$('#BTC').on('click', buttonPress);
+$('#LTC').on('click', buttonPress);
+$('#LINK').on('click', buttonPress);
+$('#EOS').on('click', buttonPress);
+$('#XRP').on('click', buttonPress);
+$('#OMG').on('click', buttonPress);
+$('#ETH').on('click', buttonPress);
+$('#BCH').on('click', buttonPress);
+$('#TRX').on('click', buttonPress);
+$('#JST').on('click', buttonPress);
+
+
+
+
+
+
+function buttonPress() {
+    console.log($(this));
     $("#chartjs-tooltip").css({opacity: 0});
-    let coinName = $(this).siblings("select").val();
+    let coinName = $(this).attr('id');
     totalSearch(coinName);
-
-
-});
+}
 
 function firstPull(coinName) {
     totalSearch(coinName);

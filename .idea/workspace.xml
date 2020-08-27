@@ -34,7 +34,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a212434e-da04-413e-ac55-4dece6b0a390" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +45,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="JavaScript File" />
+        <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -58,9 +60,11 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
@@ -101,7 +105,8 @@
       <workItem from="1598333405356" duration="2032000" />
       <workItem from="1598390739786" duration="69000" />
       <workItem from="1598416502835" duration="3992000" />
-      <workItem from="1598420779890" duration="2802000" />
+      <workItem from="1598420779890" duration="3022000" />
+      <workItem from="1598483650704" duration="6255000" />
     </task>
     <servers />
   </component>
@@ -201,6 +206,10 @@
       <screen x="0" y="23" width="1920" height="992" />
     </state>
     <state width="1899" height="332" key="GridCell.Tab.3.right/-1440.453.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1597898278512" />
+    <state x="747" y="227" key="RollbackChangesDialog" timestamp="1598486444526">
+      <screen x="0" y="23" width="1920" height="990" />
+    </state>
+    <state x="747" y="227" key="RollbackChangesDialog/-1440.453.1440.877/0.23.1920.990@0.23.1920.990" timestamp="1598486444526" />
     <state x="845" y="23" key="SettingsEditor" timestamp="1597905039721">
       <screen x="0" y="23" width="1920" height="1057" />
     </state>
