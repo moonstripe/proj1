@@ -67,7 +67,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.XML" />
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -107,7 +107,7 @@
       <workItem from="1598390739786" duration="69000" />
       <workItem from="1598416502835" duration="3992000" />
       <workItem from="1598420779890" duration="3022000" />
-      <workItem from="1598483650704" duration="9819000" />
+      <workItem from="1598483650704" duration="11641000" />
     </task>
     <servers />
   </component>
@@ -211,23 +211,29 @@
       <screen x="0" y="23" width="1920" height="990" />
     </state>
     <state x="747" y="227" key="RollbackChangesDialog/-1440.453.1440.877/0.23.1920.990@0.23.1920.990" timestamp="1598486444526" />
-    <state x="845" y="23" key="SettingsEditor" timestamp="1597905039721">
-      <screen x="0" y="23" width="1920" height="1057" />
+    <state x="845" y="23" key="SettingsEditor" timestamp="1598502112114">
+      <screen x="0" y="23" width="1920" height="990" />
     </state>
     <state x="845" y="23" key="SettingsEditor/-1440.453.1440.823/0.23.1920.1057@0.23.1920.1057" timestamp="1597905039721" />
+    <state x="845" y="23" key="SettingsEditor/-1440.453.1440.877/0.23.1920.990@0.23.1920.990" timestamp="1598502112114" />
     <state x="845" y="23" key="SettingsEditor/-1440.453.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1597898124278" />
     <state x="761" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1598301304312">
       <screen x="0" y="23" width="1920" height="990" />
     </state>
     <state x="761" y="439" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/-1440.453.1440.877/0.23.1920.990@0.23.1920.990" timestamp="1598301304312" />
+    <state x="661" y="150" width="598" height="735" key="find.popup" timestamp="1598501983281">
+      <screen x="0" y="23" width="1920" height="990" />
+    </state>
+    <state x="661" y="150" width="598" height="735" key="find.popup/-1440.453.1440.877/0.23.1920.990@0.23.1920.990" timestamp="1598501983281" />
     <state x="625" y="239" key="run.anything.popup" timestamp="1597901642997">
       <screen x="0" y="23" width="1920" height="992" />
     </state>
     <state x="625" y="239" key="run.anything.popup/-1440.453.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1597901642997" />
-    <state x="625" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1598128203149">
-      <screen x="0" y="23" width="1920" height="991" />
+    <state x="625" y="241" width="670" height="676" key="search.everywhere.popup" timestamp="1598502109478">
+      <screen x="0" y="23" width="1920" height="990" />
     </state>
     <state x="625" y="256" width="670" height="721" key="search.everywhere.popup/-1440.453.1440.826/0.23.1920.1057@0.23.1920.1057" timestamp="1597894240395" />
+    <state x="625" y="241" width="670" height="676" key="search.everywhere.popup/-1440.453.1440.877/0.23.1920.990@0.23.1920.990" timestamp="1598502109478" />
     <state x="625" y="241" width="670" height="676" key="search.everywhere.popup/-1440.453.1440.877/0.23.1920.991@0.23.1920.991" timestamp="1598128203149" />
     <state x="625" y="242" width="670" height="676" key="search.everywhere.popup/-1440.453.1440.877/0.23.1920.992@0.23.1920.992" timestamp="1597890379532" />
   </component>

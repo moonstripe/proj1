@@ -92,7 +92,7 @@ let chart = new Chart(ctx, {
 
                     var innerHtml = '<thead>';
 
-
+                    //Custom News Stories
                     titleLines.forEach(function(title) {
                         for (let i = 0; i < articles.length; i++) {
                             if (title === moment(articles[i].publishedAt).format('YYYY-MM-DD')) {
